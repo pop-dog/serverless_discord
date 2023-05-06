@@ -1,0 +1,110 @@
+// roll.js
+module.exports = function (body) {
+    console.log(body);
+    const data = body.data;
+
+    // Validate the request
+    if (!data || !data.options || data.options.length != 1 || data.options[0].name != 'expression') return 'Invalid options for /roll command.';
+    
+    return roll(data.options[0].value);
+};
+
+function roll(diceExpression) {
+    console.log('Rolling: ' + diceExpression);
+    if (!diceExpression) {
+        return 'No dice expression provided.'
+    }
+    const santizedDiceExpression = diceExpression.replace(/\s/g, '');
+
+    // Initialize variables
+    let start = 0;
+    let currentSign = '';
+    // Holds the total of all rolls
+    let total = 0;
+    // Holds the end modifier
+    let mod = 0;
+    // Holds the rolls
+    let rolls = [];
+
+    // Loop over each character in the expression
+    for (let i = 0; i < santizedDiceExpression.length; i++) {
+        const c = santizedDiceExpression[i];
+        
+        // Check if we reached a + or - sign or the end of the expression
+        if (c == '+' || c == '-' || i == santizedDiceExpression.length - 1) {
+
+            // Create a substring from the start of the expression to the current index
+            let die = santizedDiceExpression.substring(start, i);
+            if (!die) die = santizedDiceExpression[i]; // if the substring is empty, then we are at the end and the character is the last modifier
+
+            // Validate the die string
+            if (!die.match(/^[0-9]+[d]?[0-9]*$/)) return 'Invalid dice expression.';
+
+            const parts = die.split('d');
+
+            // Is a dice roll (e.g. 1d20)
+            if (parts.length == 2) {
+                const numRolls = parseInt(parts[0]);
+                const numSides = parseInt(parts[1]);
+                const roll = rollDie(numRolls, numSides);
+                total = currentSign == '-' ? total - roll.total : total + roll.total;
+                if (currentSign == '-') roll.rolls = roll.rolls.map(r => -r);
+                rolls = rolls.concat(roll.rolls);
+            }
+            // Is a modifier (e.g. +5) 
+            else if (parts.length == 1)
+            {
+                mod = currentSign == '-' ? mod - parseInt(parts[0]) : mod + parseInt(parts[0]);
+                total = currentSign == '-' ? total - parseInt(parts[0]) : total + parseInt(parts[0]);
+            }
+
+            // Set the start of the next substring
+            start = i+1;
+
+            // Set the current sign
+            currentSign = c;
+        }
+    }
+
+    // Sort rolls in descending order
+    rolls.sort((a, b) => b - a);
+
+    // Format the response
+    return formatResponse(diceExpression, total, rolls, mod);
+}
+
+
+function formatResponse(expression, total, rolls, mod) {
+    let r = `\`\`\`\n> Rolling ${expression}...\n`;
+    if (rolls.length == 1 && !mod) {
+        r += `> [${rolls[0]}]\n\`\`\``;
+    } else {
+        r += '> ';
+        for (let i = 0; i < rolls.length; i++) {
+            if (i > 0) r += ' ';
+            r += `[${rolls[i]}]`;
+        }
+        r += '\n';
+        if (mod) {
+            r += `> ${mod}\n`;
+        }
+        r += '--------\n';
+        r += `> ${total}\n\`\`\``;
+    }
+    return r;
+}
+
+function rollDie(numRolls, numSides) {
+    const rolls = [];
+    let total = 0;
+    for (let i = 0; i < numRolls; i++) {
+        const roll = rollSingleDie(numSides);
+        rolls.push(roll);
+        total += roll;
+    }
+    return { rolls, total };
+}
+
+function rollSingleDie(numSides) {
+    return Math.floor(Math.random() * numSides) + 1;
+}
