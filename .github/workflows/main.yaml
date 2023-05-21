@@ -11,32 +11,32 @@ jobs:
 
     steps:
     - name: Checkout
+      working-directory: ./lambda_bot
       uses: actions/checkout@v3
-      working-direcotry: ./lambda_bot
 
     - name: Use Node.js
+      working-directory: ./lambda_bot
       uses: actions/setup-node@v3
       with:
         node-version: '16'
-      working-direcotry: ./lambda_bot
         
     - name: Install dependencies
-      working-direcotry: ./lambda_bot
+      working-directory: ./lambda_bot
       run: npm ci
       
 
     - name: Package Function
-      working-direcotry: ./lambda_bot
+      working-directory: ./lambda_bot
       run: zip -r function.zip .
 
     - name: Configure AWS credentials
+      working-directory: ./lambda_bot
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
-      working-direcotry: ./lambda_bot
 
     - name: Deploy to Lambda
-      working-direcotry: ./lambda_bot
+      working-directory: ./lambda_bot
       run: aws lambda update-function-code --function-name discord --zip-file fileb://function.zip
