@@ -3,6 +3,8 @@ const axios = require('axios').default;
 
 let url = `https://discord.com/api/v8/applications/${process.env.APP_ID}/guilds/${process.env.GUILD_ID}/commands`
 
+console.log('Registering commands to: ' + url)
+
 const headers = {
   "Authorization": `Bot ${process.env.BOT_TOKEN}`,
   "Content-Type": "application/json"
