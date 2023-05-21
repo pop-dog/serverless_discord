@@ -1,6 +1,8 @@
 const nacl = require('tweetnacl');
 const slashCommandHandler = require('./helpers/slash-command-handler.js');
 
+// Hello from GitHub!
+
 exports.handler = async (event) => {
   // Checking signature (requirement 1.)
   // Your public key can be found on your application in the Developer Portal
