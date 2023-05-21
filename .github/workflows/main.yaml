@@ -15,7 +15,6 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Use Node.js
-      working-direcotry: ./lambda_bot
       uses: actions/setup-node@v3
       with:
         node-version: '16'
