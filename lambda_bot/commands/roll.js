@@ -75,7 +75,7 @@ function roll(diceExpression) {
 
 
 function formatResponse(expression, total, rolls, mod) {
-    let r = `\`\`\`\n> Rolling ${expression}...\n`;
+    let r = `\`\`\`\n> Rolling (${expression})...\n`;
     if (rolls.length == 1 && !mod) {
         r += `> [${rolls[0]}]\n\`\`\``;
     } else {
