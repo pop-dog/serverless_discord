@@ -11,7 +11,7 @@ const headers = {
 let command_data = {
   "name": "roll",
   "type": 1,
-  "description": "Roll some dice!",
+  "description": "Roll some dice! (Hello from GitHub!)",
   "options": [
     {
       "name": "expression",

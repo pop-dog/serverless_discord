@@ -29,4 +29,31 @@ jobs:
         working-directory: ./lambda_bot
         run: |
           zip -r deploy.zip ./*
-          aws lambda update-function-code --function-name=discord --zip-file=fileb://deploy.zip 
+          aws lambda update-function-code --function-name=discord --zip-file=fileb://deploy.zip
+  register_commands:
+    runs-on: ubuntu-latest 
+    steps:
+    #Using versioned actions 
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:  
+          node-version: '14'
+      - name: npm install
+        working-directory: ./register_commands
+        env:
+          CI: true
+        run: |
+          npm ci 
+            - name: 'Create env file'
+      - name: 'Create env file'
+        working-directory: ./register_commands
+        run: |
+          touch .env
+          echo APP_ID=${{ secrets.DISCORD_APP_ID }}  >> .env
+          echo API_KEY=${{ secrets.DISCORD_GUILD_ID }} >> .env
+          echo BOT_TOKEN=${{ secrets.DISCORD_BOT_TOKEN }} >> .env
+          cat .env
+      - name: Run the register script
+        working-directory: ./register_commands
+        run: |
+          node register.js
