@@ -47,7 +47,7 @@ jobs:
         run: |
           touch .env
           echo APP_ID=${{ secrets.DISCORD_APP_ID }}  >> .env
-          echo API_KEY=${{ secrets.DISCORD_GUILD_ID }} >> .env
+          echo GUILD_ID=${{ secrets.DISCORD_GUILD_ID }} >> .env
           echo BOT_TOKEN=${{ secrets.DISCORD_BOT_TOKEN }} >> .env
           cat .env
       - name: Run the register script
