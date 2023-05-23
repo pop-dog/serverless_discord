@@ -1,6 +1,5 @@
 // roll.js
 module.exports = function (body) {
-    console.log(body);
     const data = body.data;
 
     // Validate the request
@@ -10,7 +9,6 @@ module.exports = function (body) {
 };
 
 function roll(diceExpression) {
-    console.log('Rolling: ' + diceExpression);
     if (!diceExpression) {
         return 'No dice expression provided.'
     }
@@ -33,9 +31,11 @@ function roll(diceExpression) {
         // Check if we reached a + or - sign or the end of the expression
         if (c == '+' || c == '-' || i == santizedDiceExpression.length - 1) {
 
+            let end = i  + 1;
+            if (c == '+' || c == '-') end = i; // Don't include the sign in the substring
+
             // Create a substring from the start of the expression to the current index
-            let die = santizedDiceExpression.substring(start, i);
-            if (!die) die = santizedDiceExpression[i]; // if the substring is empty, then we are at the end and the character is the last modifier
+            let die = santizedDiceExpression.substring(start, end);
 
             // Validate the die string
             if (!die.match(/^[0-9]+[d]?[0-9]*$/)) return 'Invalid dice expression.';

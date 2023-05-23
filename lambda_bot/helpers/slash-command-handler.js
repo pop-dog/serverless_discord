@@ -1,41 +1,26 @@
 const roll = require('../commands/roll.js');
 
 module.exports = function(body) {
-  try {
-    const data = body.data;
-    // Handle /foo Command
-    if (data.name == 'foo') {
-      return happyResponse('bar');
-    }
-  
-    if (data.name == 'roll') {
-      return happyResponse(roll(body));
-    }
+  const data = body.data;
 
-    console.log('[ERROR] User submitted unhandled slash command: ' + data.name);
-    return sadResponse('Command not found.');
-  }
-  catch (ex) {
-    console.log(ex)
-    return sadResponse('Invalid request.');
+  // Validate the request
+  if (!data) throw 'Invalid request.';
+  if (!data.name) throw 'Invalid request: Missing name.';
+
+  switch(data.name) {
+    case 'foo':
+      return interactionResponse('bar');
+    case 'roll':
+      return interactionResponse(roll(body));
+    default:
+      throw 'Invalid request: Unknown command.';
   }
 }
 
-function happyResponse(content) {
-  return {
-    handled: true,
-    message: JSON.stringify(
-      {
-        "type": 4,
-        "data": { "content": content }
-      }
-    )
-  };
-}
-
-function sadResponse(error) {
-  return {
-    handled: false,
-    message: error
-  }
+function interactionResponse(content, type = 4) {
+  return JSON.stringify(
+    {
+      "type": type,
+      "data": { "content": content }
+    });
 }
