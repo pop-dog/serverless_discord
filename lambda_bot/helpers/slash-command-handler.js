@@ -1,6 +1,7 @@
 const roll = require('../commands/roll.js');
+const chat = require('../commands/chat.js');
 
-module.exports = function(body) {
+module.exports = async function(body) {
   const data = body.data;
 
   // Validate the request
@@ -12,6 +13,10 @@ module.exports = function(body) {
       return interactionResponse('bar');
     case 'roll':
       return interactionResponse(roll(body));
+    case 'chat':
+      let chatResponse = await chat(body);
+      if (!chatResponse) return interactionResponse('Message sent.', 5);
+      throw chatResponse; 
     default:
       throw 'Invalid request: Unknown command.';
   }
