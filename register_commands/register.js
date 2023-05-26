@@ -39,6 +39,10 @@ let command_data = [
   }
 ]
 
-axios.post(url, JSON.stringify(command_data), {
-  headers: headers,
-})
+for (let i = 0; i < command_data.length; i++) {
+  let command = command_data[i]
+  console.log('Registering command: ' + command.name)
+  axios.post(url, JSON.stringify(command), {
+    headers: headers,
+  })
+}
