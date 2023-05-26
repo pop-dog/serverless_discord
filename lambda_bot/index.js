@@ -3,6 +3,8 @@ const slashCommandHandler = require('./helpers/slash-command-handler.js');
 
 exports.handler = async (event) => {
   try {
+    console.log('Received event:');
+    console.log(event);
     // Checking signature (requirement 1.)
     // Your public key can be found on your application in the Developer Portal
     const PUBLIC_KEY = process.env.PUBLIC_KEY;
@@ -25,8 +27,12 @@ exports.handler = async (event) => {
 
     const body = JSON.parse(strBody);
 
+    console.log('Received body:');
+    console.log(body);
+
     // Replying to ping (requirement 2.)
     if (body.type == 1) {
+      console.log('Responding to ping. Sending pong.');
       return {
         statusCode: 200,
         body: JSON.stringify({ "type": 1 }),
@@ -36,6 +42,7 @@ exports.handler = async (event) => {
     // Replying to slash command
     if (body.type == 2) {
       try {
+        console.log('Responding to slash command.')
         return response = slashCommandHandler(body);
       }
       catch(ex) {
