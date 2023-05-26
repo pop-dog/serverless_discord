@@ -43,7 +43,7 @@ exports.handler = async (event) => {
     if (body.type == 2) {
       try {
         console.log('Responding to slash command.')
-        return response = await slashCommandHandler(body);
+        return response = slashCommandHandler(body);
       }
       catch(ex) {
         console.log('Failed to handle slash command!');
