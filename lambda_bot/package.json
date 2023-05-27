@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "aws-sdk": "^2.1386.0",
+    "axios": "^1.4.0",
     "tweetnacl": "^1.0.3"
   }
 }
