@@ -3,7 +3,8 @@ const AWS = require('aws-sdk');
 module.exports = {
     // SQS helper functions
     sqs: {
-        async sendMessageJson(queueUrl, jsonMessage, messageBody = '') {
+        async sendMessageJson(queueUrl, jsonMessage, messageBody) {
+            if (!messageBody) throw 'Missing message body';
             let messageAttributes = {};
             for (let key in jsonMessage) {
                 // Check if the field is a number

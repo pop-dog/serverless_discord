@@ -8,7 +8,8 @@ module.exports = async function (body) {
 
     try {
       // Send SQS message
-      let sqsResponse = await awsHelper.sqs.sendMessageJson(process.env.CHATBOT_QUEUE_URL, { message: data.options[0].value });
+      const message = data.options[0].value;
+      let sqsResponse = await awsHelper.sqs.sendMessageJson(process.env.CHATBOT_QUEUE_URL, { "message": message }, `Submitting message "${message}" to chatbot queue.`);
       console.log(sqsResponse);
       return '';
     } catch(ex) {
