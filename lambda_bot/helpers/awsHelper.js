@@ -32,7 +32,7 @@ module.exports = {
         },
         async sendMessage(queueUrl, messageAttributes, messageBody = '') {
             return await new Promise((resolve, reject) => {
-                let sqs = new aws.SQS();
+                let sqs = new AWS.SQS();
                 sqs.sendMessage({ QueueUrl: queueUrl, MessageAttributes: messageAttributes, MessageBody: messageBody }, (err, result) => {
                     if (err) {
                         reject(err);
@@ -45,7 +45,7 @@ module.exports = {
         },
         async deleteMessage(queueUrl, receiptHandle) {
             return await new Promise((resolve, reject) => {
-                let sqs = new aws.SQS();
+                let sqs = new AWS.SQS();
                 sqs.deleteMessage({ QueueUrl: queueUrl, ReceiptHandle: receiptHandle }, (err, result) => {
                     if (err) {
                         reject(err);
