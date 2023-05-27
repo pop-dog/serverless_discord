@@ -4,13 +4,11 @@ module.exports = async function (body) {
     const data = body.data;
 
     // Validate the request
-    if (!data || !data.options || data.options.length != 1 || data.options[0].name != 'message') return 'Invalid options for /chat command.';
+    if (!data || !data.options || data.options.length < 1 || data.options[0].name != 'message' || !data.options[0].value) return 'Invalid options for /chat command.';
 
     try {
       // Send SQS message
-      let sqsResponse = await awsHelper.sqs.sendMessage(process.env.CHATBOT_QUEUE_URL, {
-          message: data.options[0].value,
-      });
+      let sqsResponse = await awsHelper.sqs.sendMessageJson(process.env.CHATBOT_QUEUE_URL, { message: data.options[0].value });
       console.log(sqsResponse);
       return '';
     } catch(ex) {
