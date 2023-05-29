@@ -11,8 +11,9 @@ module.exports = async function (body) {
       const message = data.options[0].value;
       const username = body.member.user.username;
       const token = body.token;
+      const applicationId = body.application_id;
 
-      let sqsResponse = await awsHelper.sqs.sendMessageJson(process.env.CHATBOT_QUEUE_URL, { "message": message, "username": username, "token": token }, `Submitting message "${message}" to chatbot queue.`);
+      let sqsResponse = await awsHelper.sqs.sendMessageJson(process.env.CHATBOT_QUEUE_URL, { "message": message, "username": username, "token": token, "application_id": applicationId }, `Submitting message "${message}" to chatbot queue.`);
       console.log(sqsResponse);
       return '';
     } catch(ex) {
