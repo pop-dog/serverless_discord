@@ -1,7 +1,7 @@
 const nacl = require('tweetnacl');
 const slashCommandHandler = require('./helpers/slash-command-handler.js');
 
-exports.handler = async (event) => {
+exports.handler = async (event, context, callback) => {
   try {
     console.log('Received event:');
     console.log(event);
@@ -43,7 +43,7 @@ exports.handler = async (event) => {
     if (body.type == 2) {
       try {
         console.log('Responding to slash command.')
-        response = await slashCommandHandler(body);
+        response = await slashCommandHandler(body, callback);
         console.log('Response:');
         console.log(response);
         return response;

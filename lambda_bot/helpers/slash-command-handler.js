@@ -1,7 +1,7 @@
 const roll = require('../commands/roll.js');
 const chat = require('../commands/chat.js');
 
-module.exports = async function(body) {
+module.exports = async function(body, callback) {
   const data = body.data;
 
   // Validate the request
@@ -14,6 +14,7 @@ module.exports = async function(body) {
     case 'roll':
       return interactionResponse(roll(body));
     case 'chat':
+      callback(null, interactionResponse('Message sent.', 5));
       let chatResponse = await chat(body);
       if (!chatResponse) return interactionResponse('Message sent.', 5);
       throw chatResponse; 
