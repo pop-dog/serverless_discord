@@ -43,7 +43,10 @@ exports.handler = async (event) => {
     if (body.type == 2) {
       try {
         console.log('Responding to slash command.')
-        return response = await slashCommandHandler(body);
+        response = await slashCommandHandler(body);
+        console.log('Response:');
+        console.log(response);
+        return response;
       }
       catch(ex) {
         console.log('Failed to handle slash command!');
@@ -57,9 +60,11 @@ exports.handler = async (event) => {
 
     console.log('Something went wrong if we got here..');
 
-    return {
-      statusCode: 500  // If no handler implemented for Discord's request
-    }
+    return JSON.stringify(
+      {
+        "type": 4,
+        "data": { "content": "Unhandled command." }
+      });
   }
   catch (ex) {
     console.log(ex);
