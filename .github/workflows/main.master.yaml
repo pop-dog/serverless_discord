@@ -2,7 +2,7 @@ name: Deploy Lambda
 on:
   push:
     branches:
-    - testing   
+    - master   
 
 jobs:
   call-workflow:
