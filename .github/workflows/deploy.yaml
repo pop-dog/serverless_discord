@@ -1,8 +1,17 @@
-name: Deploy Lambda
+name: Deploy Lambda to test
 on:
-  push:
-    branches:
-    - master   
+  workflow_call:
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+      DISCORD_APP_ID:
+        required: true
+      DISCORD_GUILD_ID:
+        required: true
+      DISCORD_BOT_TOKEN:
+        required: true
 
 jobs:
   deploy_lambda:

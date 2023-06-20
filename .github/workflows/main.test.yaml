@@ -1,0 +1,16 @@
+name: Deploy Lambda
+on:
+  push:
+    branches:
+    - testing   
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/deploy.yaml
+    with:
+      secrets:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        DISCORD_APP_ID: ${{ secrets.DISCORD_APP_ID }} 
+        DISCORD_GUILD_ID: ${{ secrets.DISCORD_GUILD_ID }} 
+        DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
