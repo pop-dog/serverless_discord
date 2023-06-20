@@ -14,6 +14,7 @@ module.exports = async function(body, callback) {
     case 'roll':
       return interactionResponse(roll(body));
     case 'chat':
+      return interactionResponse('Temporarily disabled.');
       callback(null, interactionResponse('Message sent.', 5));
       let chatResponse = await chat(body);
       if (!chatResponse) return interactionResponse('Message sent.', 5);
