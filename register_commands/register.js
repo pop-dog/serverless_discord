@@ -39,6 +39,7 @@ let command_data = [
   },
   {
     "name": "sticker",
+    "type": 1,
     "description": "Send a sticker.",
     "options": [
       {
