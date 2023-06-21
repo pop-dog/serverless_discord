@@ -1,4 +1,4 @@
-// roll.js
+// sticker.js
 module.exports = function (body) {
     const data = body.data;
 
