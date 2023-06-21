@@ -39,23 +39,17 @@ let command_data = [
   },
   {
     "name": "sticker",
-    "type": 1,
-    "description": "Send a sticker.",
+    "description": "Post a sticker!",
     "options": [
       {
-        "name": "Popdog",
-        "description": "The Popdog sticker.",
-        "type": 1
-      },
-      {
-        "name": "Honkai Star Rail",
-        "description": "Stickers from Honkai Star Rail.",
-        "type": 2,
+        "name": "Honkai: Star Rail",
+        "description": "Stickers from Honkai: Star Rail",
+        "type": 2, // 2 is type SUB_COMMAND_GROUP
         "options": [
           {
             "name": "Pom Pom: Heart",
             "description": "<3",
-            "type": 1
+            "type": 1 // 1 is type SUB_COMMAND
           }
         ]
       }
