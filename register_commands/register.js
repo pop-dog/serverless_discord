@@ -37,7 +37,25 @@ let command_data = [
       }
     ]
   },
-
+  {
+    "name": "sticker",
+    "type": 1,
+    "description": "Post a sticker!",
+    "options": [
+      {
+        "name": "Honkai Star Rail",
+        "description": "Stickers from Honkai Star Rail",
+        "type": 2, // 2 is type SUB_COMMAND_GROUP
+        "options": [
+          {
+            "name": "Pom Pom Heart",
+            "description": "Show some love, Pom Pom style!",
+            "type": 1 // 1 is type SUB_COMMAND
+          }
+        ]
+      }
+    ]
+  },
 ]
 
 for (let i = 0; i < command_data.length; i++) {
