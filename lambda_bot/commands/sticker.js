@@ -7,7 +7,11 @@ module.exports = function (body) {
     // Validate the request
     if (!data || !data.options || data.options.length == 0) return 'Invalid request.';
 
-    let sticker = STICKERS[data.options[0].name];
+    const stickerName = data.options[0].value;
+
+    console.log('Sticker: ' + stickerName);
+
+    let sticker = STICKERS[stickerName];
 
     if (sticker) return sticker;
     return 'Sticker not found.';
