@@ -1,5 +1,6 @@
 const roll = require('../commands/roll.js');
 const chat = require('../commands/chat.js');
+const sticker = require('../commands/sticker.js');
 
 module.exports = async function(body, callback) {
   const data = body.data;
@@ -13,6 +14,8 @@ module.exports = async function(body, callback) {
       return interactionResponse('bar');
     case 'roll':
       return interactionResponse(roll(body));
+    case 'sticker':
+      return interactionResponse(sticker(body));
     case 'chat':
       return interactionResponse('The chatbot is temporarily disabled.');
       callback(null, interactionResponse('Message sent.', 5));
