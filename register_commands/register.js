@@ -286,7 +286,8 @@ let command_data = [
 for (let i = 0; i < command_data.length; i++) {
   let command = command_data[i]
   console.log('Registering command: ' + command.name)
-  axios.post(url, JSON.stringify(command), {
+  let x = await axios.post(url, JSON.stringify(command), {
     headers: headers,
   })
+  console.log(x);
 }
