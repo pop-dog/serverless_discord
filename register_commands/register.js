@@ -49,13 +49,105 @@ let command_data = [
         "required": true,
         "choices": [
           {
-              "name": "Pom Pom: Heart",
-              "value": "pom_pom_heart"
+            "name": "Popdog",
+            "value": "popdog"
           },
           {
-              "name": "Popdog",
-              "value": "popdog"
+            "name": "Pom Pom: Heart",
+            "value": "pom_pom_heart"
           },
+          {
+            "name": "Pom Pom: Wow",
+            "value": "pom_pom_wow"
+          },
+          {
+            "name": "Pom Pom: Sad",
+            "value": "pom_pom_sad"
+          },
+          {
+            "name": "Pom Pom: O.K.",
+            "value": "pom_pom_ok"
+          },
+          {
+            "name": "Pom Pom: Flushed",
+            "value": "pom_pom_flushed"
+          },
+          {
+            "name": "Pom Pom: Thinking",
+            "value": "pom_pom_thinking"
+          },
+          {
+            "name": "Pom Pom: Gift",
+            "value": "pom_pom_gift"
+          },
+          {
+            "name": "Pom Pom: Typing",
+            "value": "pom_pom_typing"
+          },
+          {
+            "name": "Pom Pom: Scared",
+            "value": "pom_pom_scared"
+          },
+          {
+            "name": "Pom Pom: Kofe",
+            "value": "pom_pom_kofe"
+          },
+          {
+            "name": "Pom Pom: Happy",
+            "value": "pom_pom_happy"
+          },
+          {
+            "name": "Pom Pom: Sleepy",
+            "value": "pom_pom_sleepy"
+          },
+          {
+            "name": "Raiden: Boomer",
+            "value": "raiden_boomer"
+          },
+          {
+            "name": "Raiden: Reading",
+            "value": "raiden_reading"
+          },
+          {
+            "name": "Yae: Smug",
+            "value": "yae_smug"
+          },
+          {
+            "name": "Smug Anya",
+            "value": "smug_anya"
+          },
+          {
+            "name": "Dan Heng: Pensive",
+            "value": "dan_heng_pensive"
+          },
+          {
+            "name": "Mr. Yang: Singing",
+            "value": "mr_yang_singing"
+          },
+          {
+            "name": "Pom Pom: Angry",
+            "value": "pom_pom_angry"
+          },
+          {
+            "name": "Pom Pom: Confused",
+            "value": "pom_pom_confused"
+          },
+          {
+            "name": "March 7th: Pleased",
+            "value": "march_7th_pleased"
+          },
+          {
+            "name": "March 7th: Shopping",
+            "value": "march_7th_shopping"
+          },
+          {
+            "name": "March 7th: Distressed",
+            "value": "march_7th_distressed"
+          },
+          {
+            "name": "March 7th: Cross",
+            "value": "march_7th_cross"
+          }
         ]
       },
     ]
