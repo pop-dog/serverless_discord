@@ -43,6 +43,76 @@ let command_data = [
     "description": "Send a sticker!",
     "options": [
       {
+        "name": "Honkai: Star Rail",
+        "description": "Stickers from Honkai: Star Rail",
+        "type": 2,
+        "options": [
+          {
+            "name": "Pom Pom",
+            "description": "Pom Pom stickers",
+            "type": 1,
+            "options": [
+              {
+                "name": "name",
+                "description": "The name of the sticker.",
+                "type": 3,
+                "required": true,
+                "choices": [
+                  {
+                    "name": "Heart",
+                    "value": "pom_pom_heart"
+                  },
+                  {
+                    "name": "Wow",
+                    "value": "pom_pom_wow"
+                  },
+                  {
+                    "name": "Sad",
+                    "value": "pom_pom_sad"
+                  },
+                  {
+                    "name": "O.K.",
+                    "value": "pom_pom_ok"
+                  },
+                  {
+                    "name": "Flushed",
+                    "value": "pom_pom_flushed"
+                  },
+                  {
+                    "name": "Thinking",
+                    "value": "pom_pom_thinking"
+                  },
+                  {
+                    "name": "Gift",
+                    "value": "pom_pom_gift"
+                  },
+                  {
+                    "name": "Typing",
+                    "value": "pom_pom_typing"
+                  },
+                  {
+                    "name": "Scared",
+                    "value": "pom_pom_scared"
+                  },
+                  {
+                    "name": "Kofe",
+                    "value": "pom_pom_kofe"
+                  },
+                  {
+                    "name": "Happy",
+                    "value": "pom_pom_happy"
+                  },
+                  {
+                    "name": "Sleepy",
+                    "value": "pom_pom_sleepy"
+                  },
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "name",
         "description": "The name of the sticker.",
         "type": 3,
@@ -52,54 +122,7 @@ let command_data = [
             "name": "Popdog",
             "value": "popdog"
           },
-          {
-            "name": "Pom Pom: Heart",
-            "value": "pom_pom_heart"
-          },
-          {
-            "name": "Pom Pom: Wow",
-            "value": "pom_pom_wow"
-          },
-          {
-            "name": "Pom Pom: Sad",
-            "value": "pom_pom_sad"
-          },
-          {
-            "name": "Pom Pom: O.K.",
-            "value": "pom_pom_ok"
-          },
-          {
-            "name": "Pom Pom: Flushed",
-            "value": "pom_pom_flushed"
-          },
-          {
-            "name": "Pom Pom: Thinking",
-            "value": "pom_pom_thinking"
-          },
-          {
-            "name": "Pom Pom: Gift",
-            "value": "pom_pom_gift"
-          },
-          {
-            "name": "Pom Pom: Typing",
-            "value": "pom_pom_typing"
-          },
-          {
-            "name": "Pom Pom: Scared",
-            "value": "pom_pom_scared"
-          },
-          {
-            "name": "Pom Pom: Kofe",
-            "value": "pom_pom_kofe"
-          },
-          {
-            "name": "Pom Pom: Happy",
-            "value": "pom_pom_happy"
-          },
-          {
-            "name": "Pom Pom: Sleepy",
-            "value": "pom_pom_sleepy"
-          },
+          
           {
             "name": "Raiden: Boomer",
             "value": "raiden_boomer"
