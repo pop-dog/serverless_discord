@@ -106,97 +106,179 @@ let command_data = [
                     "name": "Sleepy",
                     "value": "pom_pom_sleepy"
                   },
+                  {
+                    "name": "Angry",
+                    "value": "pom_pom_angry"
+                  },
+                  {
+                    "name": "Confused",
+                    "value": "pom_pom_confused"
+                  },
                 ]
+              }
+            ]
+          },
+          {
+            "name": "March 7th",
+            "description": "March 7th stickers",
+            "type": 1,
+            "options": [
+              {
+                "name": "name",
+                "description": "The name of the sticker.",
+                "type": 3,
+                "required": true,
+                "choices": [
+                  {
+                    "name": "Pleased",
+                    "value": "march_7th_pleased"
+                  },
+                  {
+                    "name": "Shopping",
+                    "value": "march_7th_shopping"
+                  },
+                  {
+                    "name": "Distressed",
+                    "value": "march_7th_distressed"
+                  },
+                  {
+                    "name": "Cross",
+                    "value": "march_7th_cross"
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Characters",
+            "description": "Character stickers",
+            "type": 1,
+            "options": [
+              {
+                "name": "name",
+                "description": "The name of the sticker.",
+                "type": 3,
+                "required": true,
+                "choices": [
+                  {
+                    "name": "Gepard: Facepalm",
+                    "value": "gepard_facepalm"
+                  },
+                  {
+                    "name": "Dan Heng: Pensive",
+                    "value": "dan_heng_pensive"
+                  },
+                  {
+                    "name": "Mr. Yang: Singing",
+                    "value": "mr_yang_singing"
+                  },
+                ]
+              }
+            ]
+          },
+        ]
+      },
+      {
+        "name": "Genshin: Impact",
+        "description": "Stickers from Genshin: Impact",
+        "type": 1,
+        "options": [
+          {
+            "name": "name",
+            "description": "The name of the sticker.",
+            "type": 3,
+            "required": true,
+            "choices": [
+              {
+                "name": "Raiden: Boomer",
+                "value": "raiden_boomer"
+              },
+              {
+                "name": "Raiden: Reading",
+                "value": "raiden_reading"
+              },
+              {
+                "name": "Yae: Smug",
+                "value": "yae_smug"
+              },
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "description": "Miscellaneous stickers",
+        "type": 1,
+        "options": [
+          {
+            "name": "name",
+            "description": "The name of the sticker.",
+            "type": 3,
+            "required": true,
+            "choices": [
+              {
+                "name": "Popdog",
+                "value": "popdog"
+              },
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Memes",
+        "description": "Meme stickers",
+        "type": 1,
+        "options": [
+          {
+            "name": "name",
+            "description": "The name of the sticker.",
+            "type": 3,
+            "required": true,
+            "choices": [
+              {
+                "name": "Pizza Time",
+                "value": "pizza_time"
+              },
+              {
+                "name": "Surprised Pikachu",
+                "value": "surprised_pikachu"
+              },
+    
+              {
+                "name": "Lost Travolta",
+                "value": "lost_travolta"
+              },
+              {
+                "name": "Rubbing Hands",
+                "value": "rubbing_hands"
+              },
+              {
+                "name": "Brent Rambo",
+                "value": "brent_rambo"
               }
             ]
           }
         ]
       },
       {
-        "name": "name",
-        "description": "The name of the sticker.",
-        "type": 3,
-        "required": true,
-        "choices": [
+        "name": "Anime",
+        "description": "Anime stickers",
+        "type": 1,
+        "options": [
           {
-            "name": "Popdog",
-            "value": "popdog"
-          },
-          
-          {
-            "name": "Raiden: Boomer",
-            "value": "raiden_boomer"
-          },
-          {
-            "name": "Raiden: Reading",
-            "value": "raiden_reading"
-          },
-          {
-            "name": "Yae: Smug",
-            "value": "yae_smug"
-          },
-          {
-            "name": "Smug Anya",
-            "value": "smug_anya"
-          },
-          {
-            "name": "Dan Heng: Pensive",
-            "value": "dan_heng_pensive"
-          },
-          {
-            "name": "Mr. Yang: Singing",
-            "value": "mr_yang_singing"
-          },
-          {
-            "name": "Pom Pom: Angry",
-            "value": "pom_pom_angry"
-          },
-          {
-            "name": "Pom Pom: Confused",
-            "value": "pom_pom_confused"
-          },
-          {
-            "name": "March 7th: Pleased",
-            "value": "march_7th_pleased"
-          },
-          {
-            "name": "March 7th: Shopping",
-            "value": "march_7th_shopping"
-          },
-          {
-            "name": "March 7th: Distressed",
-            "value": "march_7th_distressed"
-          },
-          {
-            "name": "March 7th: Cross",
-            "value": "march_7th_cross"
-          },
-          {
-            "name": "Pizza Time",
-            "value": "pizza_time"
-          },
-          {
-            "name": "Surprised Pikachu",
-            "value": "surprised_pikachu"
-          },
-          {
-            "name": "Gepard: Facepalm",
-            "value": "gepard_facepalm"
-          },
-          {
-            "name": "Lost Travolta",
-            "value": "lost_travolta"
-          },
-          {
-            "name": "Rubbing Hands",
-            "value": "rubbing_hands"
-          },
-          {
-            "name": "Brent Rambo",
-            "value": "brent_rambo"
+            "name": "name",
+            "description": "The name of the sticker.",
+            "type": 3,
+            "required": true,
+            "choices": [
+              {
+                "name": "Smug Anya",
+                "value": "smug_anya"
+              },
+            ]
           }
         ]
-      },
+      }
     ]
   },
 ]
