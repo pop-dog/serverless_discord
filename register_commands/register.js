@@ -147,7 +147,7 @@ let command_data = [
           {
             "name": "March 7th: Cross",
             "value": "march_7th_cross"
-          }
+          },
         ]
       },
     ]
