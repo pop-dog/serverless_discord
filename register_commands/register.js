@@ -148,6 +148,30 @@ let command_data = [
             "name": "March 7th: Cross",
             "value": "march_7th_cross"
           },
+          {
+            "name": "Pizza Time",
+            "value": "pizza_time"
+          },
+          {
+            "name": "Surprised Pikachu",
+            "value": "surprised_pikachu"
+          },
+          {
+            "name": "Gepard: Facepalm",
+            "value": "gepard_facepalm"
+          },
+          {
+            "name": "Lost Travolta",
+            "value": "lost_travolta"
+          },
+          {
+            "name": "Rubbing Hands",
+            "value": "rubbing_hands"
+          },
+          {
+            "name": "Brent Rambo",
+            "value": "brent_rambo"
+          }
         ]
       },
     ]

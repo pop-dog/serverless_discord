@@ -43,4 +43,10 @@ const STICKERS = {
     "smug_anya": "https://media.tenor.com/zayuqO6PpXMAAAAC/anya-heh.gif",
     "march_7th_distressed": "https://cdn.discordapp.com/attachments/1121165873789546629/1121229513163022396/latest.png",
     "march_7th_cross": "https://cdn.discordapp.com/attachments/1121165873789546629/1121229569689657354/latest.png",
+    "pizza_time": "https://cdn.discordapp.com/attachments/1121165873789546629/1121541407157526568/image.png",
+    "surprised_pikachu": "https://cdn.discordapp.com/attachments/1121165873789546629/1121538299119550564/sticker_2134-512x512.png",
+    "gepard_facepalm": "https://cdn.discordapp.com/attachments/1121165873789546629/1121530428885573794/latest.png",
+    "lost_travolta": "https://cdn.discordapp.com/attachments/1121165873789546629/1121532186173124748/sticker_7.png",
+    "rubbing_hands": "https://cdn.discordapp.com/attachments/1121165873789546629/1121532250220138586/sticker_11.png",
+    "brent_rambo": "https://media.tenor.com/A-ozELwp694AAAAC/thumbs-thumbs-up-kid.gif"
 };
