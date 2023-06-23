@@ -346,6 +346,25 @@ async function main() {
           ]
         },
         {
+          "name": "diablo",
+          "description": "Diablo stickers",
+          "type": 1,
+          "options": [
+            {
+              "name": "name",
+              "description": "The name of the sticker.",
+              "type": 3,
+              "required": true,
+              "choices": [
+                {
+                  "name": "D1 Icon",
+                  "value": "diablo_icon"
+                }
+              ]
+            }
+          ]
+        }
+        {
           "name": "sunny",
           "description": "It's Always Sunny stickers",
           "type": 1,
