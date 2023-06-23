@@ -347,6 +347,7 @@ async function main() {
                 {
                   "name": "Restaurant Look",
                   "value": "sunny_restaurant_look"
+                }
               ]
             }
           ]
