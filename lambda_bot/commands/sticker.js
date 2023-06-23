@@ -64,5 +64,9 @@ const STICKERS = {
     "overwatch_dva_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121537089289338981/image.png",
     "overwatch_logo": "https://cdn.discordapp.com/attachments/1121165873789546629/1121815261918548020/image.png",
     "sunny_restaurant_look": "https://media.tenor.com/3Ug1qBEk56UAAAAd/the-gang-dines-out-charlie.gif",
-    "mind_blown": "https://media.tenor.com/bD9vHNiR1rQAAAAd/boom-mind-blown.gif"
+    "mind_blown": "https://media.tenor.com/bD9vHNiR1rQAAAAd/boom-mind-blown.gif",
+    "overwatch_mercy_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121867514410975272/image.png",
+    "overwatch_junker_queen_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121867168716435556/image.png",
+    "overwatch_kiriko_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121866968551661708/image.png",
+    "sunny_egg": "https://cdn.discordapp.com/attachments/1121165873789546629/1121873618058625094/image.png"
 };
