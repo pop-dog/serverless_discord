@@ -7,6 +7,13 @@ module.exports = function (body) {
     // Validate the request
     if (!data || !data.options || data.options.length == 0) return 'Invalid request.';
 
+    // Explore data object
+    let currentObject = data;
+    while (currentObject && currentObject.options && currentObject.options.length > 0) {
+        console.log(currentObject);
+        currentObject = currentObject.options[0];
+    }
+
     const stickerName = data.options[0].value;
 
     console.log('Sticker: ' + stickerName);
