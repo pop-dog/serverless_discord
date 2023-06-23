@@ -7,16 +7,18 @@ module.exports = function (body) {
     // Validate the request
     if (!data || !data.options || data.options.length == 0) return 'Invalid request.';
 
+    let stickerName = '';
+
     // Explore data object
     let currentObject = data;
     while (currentObject && currentObject.options && currentObject.options.length > 0) {
         console.log(currentObject);
         currentObject = currentObject.options[0];
+        if (currentObject.name && currentObject.value && currentObject.name.toLowerCase() == "name") {
+            console.log('Found Sticker name: ' + currentObject.value);
+            stickerName = currentObject.value;
+        }
     }
-
-    const stickerName = data.options[0].value;
-
-    console.log('Sticker: ' + stickerName);
 
     let sticker = STICKERS[stickerName];
 
