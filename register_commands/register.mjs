@@ -259,6 +259,10 @@ async function main() {
                 {
                   "name": "Cringe Face",
                   "value": "cringe_face"
+                },
+                {
+                  "name": "Mind Blown",
+                  "value": "mind_blown"
                 }
               ]
             }
@@ -325,6 +329,24 @@ async function main() {
                   "name": "Gordon Glasses",
                   "value": "gordon_glasses"
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sunny",
+          "description": "It's Always Sunny stickers",
+          "type": 1,
+          "options": [
+            {
+              "name": "name",
+              "description": "The name of the sticker.",
+              "type": 3,
+              "required": true,
+              "choices": [
+                {
+                  "name": "Restaurant Look",
+                  "value": "sunny_restaurant_look"
               ]
             }
           ]
