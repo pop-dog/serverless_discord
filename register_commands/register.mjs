@@ -43,12 +43,12 @@ async function main() {
       "description": "Send a sticker!",
       "options": [
         {
-          "name": "Honkai: Star Rail",
+          "name": "honkai",
           "description": "Stickers from Honkai: Star Rail",
           "type": 2,
           "options": [
             {
-              "name": "Pom Pom",
+              "name": "pom_pom",
               "description": "Pom Pom stickers",
               "type": 1,
               "options": [
@@ -119,7 +119,7 @@ async function main() {
               ]
             },
             {
-              "name": "March 7th",
+              "name": "march_7th",
               "description": "March 7th stickers",
               "type": 1,
               "options": [
@@ -150,8 +150,8 @@ async function main() {
               ]
             },
             {
-              "name": "Characters",
-              "description": "Character stickers",
+              "name": "other",
+              "description": "Other stickers",
               "type": 1,
               "options": [
                 {
@@ -179,7 +179,7 @@ async function main() {
           ]
         },
         {
-          "name": "Genshin: Impact",
+          "name": "genshin",
           "description": "Stickers from Genshin: Impact",
           "type": 1,
           "options": [
@@ -206,7 +206,7 @@ async function main() {
           ]
         },
         {
-          "name": "Miscellaneous",
+          "name": "misc",
           "description": "Miscellaneous stickers",
           "type": 1,
           "options": [
@@ -225,7 +225,7 @@ async function main() {
           ]
         },
         {
-          "name": "Memes",
+          "name": "meme",
           "description": "Meme stickers",
           "type": 1,
           "options": [
@@ -261,7 +261,7 @@ async function main() {
           ]
         },
         {
-          "name": "Anime",
+          "name": "anime",
           "description": "Anime stickers",
           "type": 1,
           "options": [
