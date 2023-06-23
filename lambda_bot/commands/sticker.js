@@ -68,5 +68,6 @@ const STICKERS = {
     "overwatch_mercy_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121867514410975272/image.png",
     "overwatch_junker_queen_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121867168716435556/image.png",
     "overwatch_kiriko_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121866968551661708/image.png",
-    "sunny_egg": "https://cdn.discordapp.com/attachments/1121165873789546629/1121873618058625094/image.png"
+    "sunny_egg": "https://cdn.discordapp.com/attachments/1121165873789546629/1121873618058625094/image.png",
+    "diablo_icon": "https://cdn.discordapp.com/attachments/1121165873789546629/1121943113460625438/image.png"
 };
