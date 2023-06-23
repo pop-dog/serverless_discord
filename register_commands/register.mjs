@@ -255,6 +255,10 @@ async function main() {
                 {
                   "name": "Brent Rambo",
                   "value": "brent_rambo"
+                },
+                {
+                  "name": "Cringe Face",
+                  "value": "cringe_face"
                 }
               ]
             }
@@ -275,6 +279,52 @@ async function main() {
                   "name": "Smug Anya",
                   "value": "smug_anya"
                 },
+              ]
+            }
+          ]
+        },
+        {
+          "name": "overwatch",
+          "description": "Overwatch stickers",
+          "type": 1,
+          "options": [
+            {
+              "name": "name",
+              "description": "The name of the sticker.",
+              "type": 3,
+              "required": true,
+              "choices": [
+                {
+                  "name": "Logo",
+                  "value": "overwatch_logo"
+                },
+                {
+                  "name": "D.Va: Cute",
+                  "value": "overwatch_dva_cute"
+                },
+                {
+                  "name": "Hanzo: Cute",
+                  "value": "overwatch_hanzo_cute"
+                },
+              ]
+            }
+          ]
+        },
+        {
+          "name": "valve",
+          "description": "Valve game stickers",
+          "type": 1,
+          "options": [
+            {
+              "name": "name",
+              "description": "The name of the sticker.",
+              "type": 3,
+              "required": true,
+              "choices": [
+                {
+                  "name": "Gordon Glasses",
+                  "value": "gordon_glasses"
+                }
               ]
             }
           ]

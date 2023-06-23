@@ -57,5 +57,10 @@ const STICKERS = {
     "gepard_facepalm": "https://cdn.discordapp.com/attachments/1121165873789546629/1121530428885573794/latest.png",
     "lost_travolta": "https://cdn.discordapp.com/attachments/1121165873789546629/1121532186173124748/sticker_7.png",
     "rubbing_hands": "https://cdn.discordapp.com/attachments/1121165873789546629/1121532250220138586/sticker_11.png",
-    "brent_rambo": "https://media.tenor.com/A-ozELwp694AAAAC/thumbs-thumbs-up-kid.gif"
+    "brent_rambo": "https://media.tenor.com/A-ozELwp694AAAAC/thumbs-thumbs-up-kid.gif",
+    "cringe_face": "https://cdn.discordapp.com/attachments/1121165873789546629/1121819747395309649/image.png",
+    "gordon_glasses": "https://cdn.discordapp.com/attachments/1121165873789546629/1121814681057759314/image.png",
+    "overwatch_hanzo_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121538405269000372/image.png",
+    "overwatch_dva_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121537089289338981/image.png",
+    "overwatch_logo": "https://cdn.discordapp.com/attachments/1121165873789546629/1121815261918548020/image.png"
 };
