@@ -310,6 +310,18 @@ async function main() {
                   "name": "Hanzo: Cute",
                   "value": "overwatch_hanzo_cute"
                 },
+                {
+                  "name": "Mercy: Cute",
+                  "value": "overwatch_mercy_cute"
+                },
+                {
+                  "name": "Junker Queen: Cute",
+                  "value": "overwatch_junker_queen_cute"
+                },
+                {
+                  "name": "Kiriko: Cute",
+                  "value": "overwatch_kiriko_cute"
+                }
               ]
             }
           ]
@@ -347,6 +359,10 @@ async function main() {
                 {
                   "name": "Restaurant Look",
                   "value": "sunny_restaurant_look"
+                },
+                {
+                  "name": "Egg",
+                  "value": "sunny_egg"
                 }
               ]
             }
