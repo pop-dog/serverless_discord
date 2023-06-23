@@ -7,9 +7,18 @@ module.exports = function (body) {
     // Validate the request
     if (!data || !data.options || data.options.length == 0) return 'Invalid request.';
 
-    const stickerName = data.options[0].value;
+    let stickerName = '';
 
-    console.log('Sticker: ' + stickerName);
+    // Explore data object
+    let currentObject = data;
+    while (currentObject && currentObject.options && currentObject.options.length > 0) {
+        console.log(currentObject);
+        currentObject = currentObject.options[0];
+        if (currentObject.name && currentObject.value && currentObject.name.toLowerCase() == "name") {
+            console.log('Found Sticker name: ' + currentObject.value);
+            stickerName = currentObject.value;
+        }
+    }
 
     let sticker = STICKERS[stickerName];
 
@@ -43,4 +52,17 @@ const STICKERS = {
     "smug_anya": "https://media.tenor.com/zayuqO6PpXMAAAAC/anya-heh.gif",
     "march_7th_distressed": "https://cdn.discordapp.com/attachments/1121165873789546629/1121229513163022396/latest.png",
     "march_7th_cross": "https://cdn.discordapp.com/attachments/1121165873789546629/1121229569689657354/latest.png",
+    "pizza_time": "https://cdn.discordapp.com/attachments/1121165873789546629/1121541407157526568/image.png",
+    "surprised_pikachu": "https://cdn.discordapp.com/attachments/1121165873789546629/1121538299119550564/sticker_2134-512x512.png",
+    "gepard_facepalm": "https://cdn.discordapp.com/attachments/1121165873789546629/1121530428885573794/latest.png",
+    "lost_travolta": "https://cdn.discordapp.com/attachments/1121165873789546629/1121532186173124748/sticker_7.png",
+    "rubbing_hands": "https://cdn.discordapp.com/attachments/1121165873789546629/1121532250220138586/sticker_11.png",
+    "brent_rambo": "https://media.tenor.com/A-ozELwp694AAAAC/thumbs-thumbs-up-kid.gif",
+    "cringe_face": "https://cdn.discordapp.com/attachments/1121165873789546629/1121819747395309649/image.png",
+    "gordon_glasses": "https://cdn.discordapp.com/attachments/1121165873789546629/1121814681057759314/image.png",
+    "overwatch_hanzo_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121538405269000372/image.png",
+    "overwatch_dva_cute": "https://cdn.discordapp.com/attachments/1121165873789546629/1121537089289338981/image.png",
+    "overwatch_logo": "https://cdn.discordapp.com/attachments/1121165873789546629/1121815261918548020/image.png",
+    "sunny_restaurant_look": "https://media.tenor.com/3Ug1qBEk56UAAAAd/the-gang-dines-out-charlie.gif",
+    "mind_blown": "https://media.tenor.com/bD9vHNiR1rQAAAAd/boom-mind-blown.gif"
 };

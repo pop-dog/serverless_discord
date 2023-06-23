@@ -62,4 +62,4 @@ jobs:
       - name: Run the register script
         working-directory: ./register_commands
         run: |
-          node register.js
+          node register.mjs
