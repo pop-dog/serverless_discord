@@ -220,6 +220,10 @@ async function main() {
                   "name": "Popdog",
                   "value": "popdog"
                 },
+                {
+                  "name": "Horn of Gondor",
+                  "value": "horn_of_gondor"
+                }
               ]
             }
           ]
