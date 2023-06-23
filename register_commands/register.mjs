@@ -363,7 +363,7 @@ async function main() {
               ]
             }
           ]
-        }
+        },
         {
           "name": "sunny",
           "description": "It's Always Sunny stickers",
